@@ -172,7 +172,7 @@
   margin-right: 9px;
 
   &:focus ~ .checkbox-icon {
-    outline: -webkit-focus-ring-color auto 1px;
+    outline: solid black 2px;
   }
 
   &:checked ~ .checkbox-icon {

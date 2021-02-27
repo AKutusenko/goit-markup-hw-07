@@ -869,7 +869,7 @@ a {
 }
 
 .modal-form-check-policy:focus ~ .checkbox-icon {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: solid black 2px;
 }
 
 .modal-form-check-policy:checked ~ .checkbox-icon {
