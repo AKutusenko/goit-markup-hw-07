@@ -19,20 +19,22 @@
   transition: background-color var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1),
     color var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--mostly-used-color-inverse);
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
+  }
 }
 
-.filter-list-btn:hover,
-.filter-list-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--mostly-used-color-inverse);
-  cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  outline: none;
-}
-
-.filter-list-item:not(:last-child) {
-  margin-right: 8px;
+.filter-list-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .projects {
@@ -57,10 +59,12 @@
   transition: box-shadow var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-list-link:hover,
-.projects-list-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.projects-list-link {
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .project-photo-wrapper {
@@ -86,11 +90,11 @@
   color: var(--mostly-used-color-inverse);
 
   background-color: rgba(33, 150, 243, 0.9);
-}
 
-.projects-list-link:hover .project-photo-overlay,
-.projects-list-link:focus .project-photo-overlay {
-  transform: translateY(0);
+  .projects-list-link:hover &,
+  .projects-list-link:focus & {
+    transform: translateY(0);
+  }
 }
 
 .project-list-item-container {

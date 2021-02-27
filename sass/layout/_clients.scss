@@ -21,22 +21,22 @@
   border-radius: 4px;
 
   transition: border-color var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.clients-list-link:hover,
-.clients-list-link:focus {
-  border-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .clients-icon {
   fill: var(--icons-mostly-used-color);
 
   transition: fill var(--transit-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.clients-list-link:hover .clients-icon,
-.clients-list-link:focus .clients-icon {
-  fill: var(--accent-color);
+  .clients-list-link:hover &,
+  .clients-list-link:focus & {
+    fill: var(--accent-color);
+  }
 }
 
 .clients-icon-1 {
